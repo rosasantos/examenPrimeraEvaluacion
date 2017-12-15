@@ -8,22 +8,27 @@ import java.util.Scanner;
 
 public class Numero {
 	
-	public static void main (String[] args) {
-	Scanner sc=new Scanner(System.in);
-	System.out.println("Introduzca el valor del primer número, mayor que cero y menor que mil");
-	int n1=sc.nextInt();
-	System.out.println("Introduzca el valor del segundo número, mayor que cero y menor que mil");	
-	int n2=sc.nextInt();	
-	sc.close();
+	public static void main (String args[]) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Introduzca el primer  número");
+		int n1=sc.nextInt();
+		System.out.println("Introduzca el segundo número");
+		int n2=sc.nextInt();
+		sc.close();
+		
+		if(mayorQueCeroMenorQueMil(n1, n2)){
+			mayorDeLosDosNumeros(n1, n2);
+		    diezPrimerosMultiplosDeTres(n2);
+		    comprobarSiEsCapicua(n2);
+			
+		}
+		else{System.out.println("Los números introducidos no cumplen la condicion de ser mayores que cero y menores de 1000");
+			}
+		
+		
+	}
 	
-	if(mayorQueCeroMenorQueMil(n1, n2)){
-		System.out.println("Son corrrectos los números");
 	
-	}	
-	else{System.out.println("Los números introducidos no cumplen la condición de ser mayores que cero y menores que mil.");
-	}	
-
-  }
 	
 	public static boolean mayorQueCeroMenorQueMil(int n1, int n2){
 	boolean si=false;
@@ -34,9 +39,62 @@ public class Numero {
 	
 	return si;
 	}
+		
 	
 	
 	
- 	
+	public static void  mayorDeLosDosNumeros(int n1, int n2){
+    int mayor=n1;
+       if(n2>mayor){
+		 mayor=n2;
+		 System.out.printf("El mayor de los dos números el  %2d%n  ",mayor );
+		}
+		else if(n2<mayor){
+		  mayor=n1;	
+		  System.out.printf("El mayor de los dos números es el: %2d%n ", mayor );	
+		}
+		else{
+		  System.out.println("Los dos números son iguales " );
+		}
+
+	}
+	
+	
+	
+		
+	public static void diezPrimerosMultiplosDeTres(int n2){
+	int contador=0;
+	 
+	      for(int i=3; i<=n2; i=i+3){
+			   if(contador<10){
+                 contador++;
+                 System.out.printf("El múltiplo de %d número %4d es:  %5d%n ", n2, contador, n2*i);	
+		       } 
+	     }
+	  	
+	}
+
+	
+	public static void comprobarSiEsCapicua(int n2){
+	String nume2= Integer.toString(n2);	
+	int contar=0;
+	   for(int i=0; i<nume2.length(); i++){
+	   
+		   if(nume2.charAt(i)==nume2.charAt(nume2.length()-1-i)){
+			contar++;
+		   }
+		}   
+		   
+	   if(contar==nume2.length()){
+          System.out.printf("El numero %d si es capicúa", n2);  
+	   }
+	   else{
+          System.out.printf("El numero %d%n  no es capicúa", n2); 
+	   }
+	   	
+	}
+
+	
 }
+
 
