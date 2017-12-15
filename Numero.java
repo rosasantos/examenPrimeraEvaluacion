@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 
 /**
- 
+ Este programa recibe dos valores comprueba si son los esperados y ejecuta varios métodos
+ * @author Rosa
+ * @version 4.0
  */
 
 
@@ -27,7 +29,12 @@ public class Numero {
 		
 		
 	}
-	
+	/**
+	 * Método que comprueba si los números introducidos son mayores que cero y menores de mil
+	 * @param n1 entero
+	 * @param n2 entero
+	 * @return si booleam
+	 * */
 	
 	
 	public static boolean mayorQueCeroMenorQueMil(int n1, int n2){
@@ -41,7 +48,11 @@ public class Numero {
 	}
 		
 	
-	
+	/**
+	 * Método que comprueba cuál de los dos es el mayor
+	 * @param n1 entero
+	 * @param n2 entero
+	 * */
 	
 	public static void  mayorDeLosDosNumeros(int n1, int n2){
     int mayor=n1;
@@ -60,7 +71,10 @@ public class Numero {
 	}
 	
 	
-	
+	/**
+	 * Método que muestra los diez primeros múltiplos de tres del segundo número introducido
+	 * @param n2 entero
+	 * */
 		
 	public static void diezPrimerosMultiplosDeTres(int n2){
 	int contador=0;
@@ -74,7 +88,10 @@ public class Numero {
 	  	
 	}
 
-	
+	/**
+	 * Método que comprueba si el segundo número es capicúa
+	 * @param n2 entero
+	 * */
 	public static void comprobarSiEsCapicua(int n2){
 	String nume2= Integer.toString(n2);	
 	int contar=0;
