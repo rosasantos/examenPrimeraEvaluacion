@@ -16,6 +16,27 @@ public class Numero {
 	int n2=sc.nextInt();	
 	sc.close();
 	
+	if(mayorQueCeroMenorQueMil(n1, n2)){
+		System.out.println("Son corrrectos los números");
+	
+	}	
+	else{System.out.println("Los números introducidos no cumplen la condición de ser mayores que cero y menores que mil.");
+	}	
+
+  }
+	
+	public static boolean mayorQueCeroMenorQueMil(int n1, int n2){
+	boolean si=false;
+	
+	  if((n1>0 && n1<1000)&&(n2>0 &&n2<1000)){
+	     si=true;	
+	  }
+	
+	return si;
 	}
+	
+	
+	
+ 	
 }
 
